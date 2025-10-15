@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-2">
+    <h2 class="font-bold">Experiencia Laboral</h2>
+    @for (experience of workExperiencie.slice().reverse(); track experience.id; let last = $last) {
+        <div class="flex flow-row gap-10">
+            <div class="mb-10" [class.mb-10]="!last">
+                @if (experience.finish) {
+                    <p>{{experience.start}} – {{experience.finish}}</p>
+                } @else {
+                    <p>{{experience.start}}</p>
+                }
+            </div>
+
+            <div>
+                <strong>{{experience.company}}</strong>
+                <p>{{experience.job}}</p>
+            </div>
+        </div>
+    }
+</div>

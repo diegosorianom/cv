@@ -1,0 +1,43 @@
+<div class="flex flex-col gap-2">
+    <h2 class="font-bold">Contacto</h2>
+    <div class="flex flow-row">
+        <div class="w-1/2">
+            <p>Teléfono</p>
+        </div>
+        <div class="w-full font-bold">
+            <p>{{contact.number}}</p>
+        </div>
+    </div>
+    <div class="flex flow-row">
+        <div class="w-1/2">
+            <p>Email</p>
+        </div>
+        <div class="w-full font-bold">
+            <p>{{contact.email}}</p>
+        </div>
+    </div>
+    <div class="flex flow-row">
+        <div class="w-1/2">
+            <p>Ubicación</p>
+        </div>
+        <div class="w-full font-bold">
+            <p>{{contact.location}}</p>
+        </div>
+    </div>
+    <div class="flex flow-row">
+        <div class="w-1/2">
+            <p>GitHub</p>
+        </div>
+        <div class="w-full font-bold">
+            <a [href]="contact.github" target="_blank">diegosorianom</a>
+        </div>
+    </div>
+    <div class="flex flow-row">
+        <div class="w-1/2">
+            <p>LinkedIn</p>
+        </div>
+        <div class="w-full font-bold">
+            <a [href]="contact.linkedin" target="_blank">Diego Soriano</a>
+        </div>
+    </div>
+</div>

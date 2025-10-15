@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-2">
+    <h2 class="font-bold">Formación</h2>
+    @for (education of education.slice().reverse(); track education.id; let last = $last) {
+        <div class="flex flow-row">
+            <div class="w-1/2 mb-10" [class.mb-15]="!last">
+                @if (education.finish) {
+                    <p>{{education.start}} – {{education.finish}}</p>
+                } @else {
+                    <p>{{education.start}}</p>
+                }
+            </div>
+
+            <div class="w-full">
+                <strong>{{education.center}}</strong>
+                <p>{{education.title}}</p>
+            </div>
+        </div>
+    }
+</div>

@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { phosphorSunFill, phosphorMoonFill } from '@ng-icons/phosphor-icons/fill'
 
 @Component({
   selector: 'app-theme-toggle',
-  imports: [],
+  imports: [NgIcon],
   templateUrl: './theme-toggle.html',
-  styleUrl: './theme-toggle.css'
+  styleUrl: './theme-toggle.css',
+  viewProviders: [provideIcons({ phosphorSunFill, phosphorMoonFill })]
 })
 export class ThemeToggle {
   isDarkMode = false;
 
   ngOnInit() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    this.isDarkMode = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+    // Solo usar localStorage, nada de detección automática
+    this.isDarkMode = localStorage.getItem('theme') === 'dark';
     this.applyTheme();
   }
 
@@ -23,11 +24,7 @@ export class ThemeToggle {
     localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
   }
 
-  applyTheme() {
-    if (this.isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+  private applyTheme() {
+    document.documentElement.classList.toggle('dark', this.isDarkMode);
   }
 }

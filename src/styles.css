@@ -19,6 +19,25 @@
   font-display: swap;
 }
 
+:root {
+  --black: #18181b;
+  --white: #f1f5f9;
+}
+
 body {
     font-family: 'Satoshi';
+    color: var(--black);
+    background-color: var(--white);
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: var(--black);
+  color: var(--white);
+  text-shadow: none;
 }

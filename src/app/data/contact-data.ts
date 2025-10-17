@@ -4,6 +4,7 @@ export interface Contact {
     location: string;
     github: string;
     linkedin: string;
+    cv: string;
 }
 
 export const ContactData: Contact = {
@@ -11,5 +12,6 @@ export const ContactData: Contact = {
     email: 'diegosorianomagallon@gmail.com',
     location: 'Zaragoza, Aragón. España',
     github: 'https://github.com/diegosorianom',
-    linkedin: 'https://www.linkedin.com/in/diego-soriano-magallon/'
+    linkedin: 'https://www.linkedin.com/in/diego-soriano-magallon/',
+    cv: '/cv/diego-soriano-cv.pdf'
 }

@@ -6,7 +6,7 @@
                 <p>{{projects.year}}</p>
             </div>
 
-            <div class="w-full cursor-pointer hover:underline" [routerLink]="['/project', projects.name.toLowerCase()]">
+            <div class="w-full cursor-pointer hover:underline" [routerLink]="['/project', getProjectSlug(projects.name)]">
                 <div class="flex flex-row gap-1">
                     <strong>{{projects.name}}</strong>
                     <ng-icon name="phosphorArrowUpRight"/>

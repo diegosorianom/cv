@@ -10,7 +10,7 @@
                 }
             </div>
 
-            <div class="w-full cursor-pointer hover:underline" [routerLink]="['/experience', experience.company.toLowerCase()]">
+            <div class="w-full cursor-pointer hover:underline" [routerLink]="['/experience', getProjectSlug(experience.company)]">
                 <div class="flex flex-row gap-1">
                     <strong>{{experience.company}}</strong>
                     <ng-icon name="phosphorArrowUpRight"/>

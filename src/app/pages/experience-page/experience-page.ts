@@ -1,12 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MarkdownComponent } from 'ngx-markdown';
+import { NgIcon, provideIcons } from "@ng-icons/core";
+import { phosphorArrowLeft } from '@ng-icons/phosphor-icons/regular';
 
 @Component({
   selector: 'app-experience-page',
-  imports: [MarkdownComponent],
+  imports: [MarkdownComponent, RouterLink, NgIcon],
   templateUrl: './experience-page.html',
-  styleUrl: './experience-page.css'
+  styleUrl: './experience-page.css',
+  viewProviders: provideIcons({ phosphorArrowLeft })
 })
 export class ExperiencePage {
   private route = inject(ActivatedRoute)

@@ -51,3 +51,31 @@ body {
   color: var(--selection-text);
   text-shadow: none;
 }
+
+markdown h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+markdown p {
+  @apply mb-2 text-justify;
+}
+
+markdown strong {
+  @apply font-bold;
+}
+
+markdown ul {
+  @apply list-disc list-inside mb-2;
+}
+
+markdown li {
+  @apply mb-1;
+}
+
+markdown a {
+  @apply underline transition-all duration-300 hover:font-bold;
+}
+
+blockquote {
+  @apply italic
+}

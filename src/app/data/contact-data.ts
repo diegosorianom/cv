@@ -13,5 +13,5 @@ export const ContactData: Contact = {
     location: 'Zaragoza, Aragón. España',
     github: 'https://github.com/diegosorianom',
     linkedin: 'https://www.linkedin.com/in/diego-soriano-magallon/',
-    cv: '/cv/diego-soriano-cv.pdf'
+    cv: 'cv/diego-soriano-cv.pdf'
 }

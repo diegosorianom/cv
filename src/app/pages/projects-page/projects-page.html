@@ -1,0 +1,14 @@
+<main class="flex flex-col gap-10">
+    <a routerLink="/" class="flex flex-row gap-1 items-center font-bold hover:underline">
+        <ng-icon name="phosphorArrowLeft"/>
+        <p>Volver</p>
+    </a>
+
+    <div class="flex flex-col gap-2">
+        @if (markdownPath) {
+            <markdown [src]="markdownPath" />
+        } @else {
+            <p>No se encontró el archivo de experiencia</p>
+        }
+    </div>
+</main>

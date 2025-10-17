@@ -1,4 +1,4 @@
-export interface Proyects {
+export interface Projects {
     id: number;
     name: string;
     type: string;
@@ -6,7 +6,7 @@ export interface Proyects {
     link: string;
 }
 
-export const ProyectsData: Proyects[] = [
+export const ProjectsData: Projects[] = [
     {
         id: 1,
         name: 'Formación Técnica Jazor',
